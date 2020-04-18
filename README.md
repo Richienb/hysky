@@ -1,41 +1,39 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# hysky [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/hysky/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/hysky)
 
-My awesome module.
+A simplified interface for the HySky API.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/hysky.png)](https://npmjs.com/package/hysky)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install hysky
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const hysky = require("hysky");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	const topAuctions = await hysky("top");
+
+	console.log(topAuctions);
+})();
 ```
 
 ## API
 
-### theModule(input, options?)
+### hysky(method, options?)
 
-#### input
+#### method
 
 Type: `string`
 
-Lorem ipsum.
+The [API method](https://github.com/Mlotov/HyskyAPI#working-with-the-api) to use.
 
 #### options
 
 Type: `object`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The options to pass to the API.

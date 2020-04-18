@@ -1,15 +1,18 @@
 /**
-My awesome module.
-@param input Lorem ipsum.
-@param postfix Lorem ipsum.
+A simplified interface for the HySky API.
+@param method The [API method](https://github.com/Mlotov/HyskyAPI#working-with-the-api) to use.
+@param options The options to pass to the API.
 @example
 ```
-const theModule = require("the-module");
+const hysky = require("hysky");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	const topAuctions = await hysky("top");
+
+	console.log(topAuctions);
+})();
 ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string
+declare function hysky<ReturnData = object | object[]>(method: string, options?: Record<string, string | number | boolean>): Promise<ReturnData>
 
-export = theModule
+export = hysky

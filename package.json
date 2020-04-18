@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "hysky",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "A simplified interface for the HySky API.",
+	"repository": "https://github.com/Richienb/hysky.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,16 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"hypixel",
+		"hysky",
+		"api",
+		"request"
+	],
+	"dependencies": {
+		"ky": "^0.19.1",
+		"ky-universal": "^0.5.0"
+	},
 	"devDependencies": {
 		"ava": "^3.7.0",
 		"eslint-config-richienb": "^0.4.2",
