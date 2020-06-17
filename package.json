@@ -1,6 +1,6 @@
 {
 	"name": "hysky",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A simplified interface for the HySky API.",
 	"repository": "https://github.com/Richienb/hysky.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
