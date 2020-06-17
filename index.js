@@ -3,6 +3,10 @@
 const ky = require("ky-universal")
 
 module.exports = async (method, options) => {
+	if (typeof method !== "string") {
+		throw new TypeError(`Expected a string, got ${typeof method}`)
+	}
+
 	const request = await ky("https://hyskyapi.cc/apihandle.php", {
 		searchParams: {
 			req: method,
@@ -14,7 +18,6 @@ module.exports = async (method, options) => {
 	try {
 		data = await request.json()
 	} catch (_) {
-		console.log(_)
 		throw new Error("Invalid data returned by the API.")
 	}
 
